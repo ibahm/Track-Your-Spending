@@ -13,7 +13,7 @@ const TransactionList = () => {
             <AddTransaction/>
 
             {transactions.map(transaction => (
-                <Transaction transaction={transaction}/>
+                <Transaction key={transaction.id} transaction={transaction}/>
             ))}
             
         </div>

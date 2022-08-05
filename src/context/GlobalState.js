@@ -1,11 +1,12 @@
 import React, {createContext, useReducer} from "react";
 import AppReducer from './AppReducer';
+import {nanoid} from 'nanoid';
 
 const initialState = {
     transactions: [
-        {id: 1, text: 'STEAM', amount: -50},
-        {id: 2, text: 'NANDOS', amount: -30},
-        {id: 3, text: 'SAVINGS', amount: +80}
+        {id: {nanoid}, text: 'Steam', price: -50},
+        {id: {nanoid}, text: 'Nandos', price: -130},
+        {id: {nanoid}, text: 'Savings', price: 80}
     ]
 }
 

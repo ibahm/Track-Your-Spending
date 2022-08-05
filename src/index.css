@@ -89,7 +89,7 @@ h1 {
   padding: 20px;
 }
 
-.trans-card {
+.trans-card-red {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,14 +97,29 @@ h1 {
   padding: 1rem;
   background-color: rgba(0,0,0,0.1);
   border-radius: 10px;
+  border-bottom: 1px solid red;
   width: 300px;
   min-width: 300px;
   transition: all 0.2s ease 0s;
 }
 
-.trans-card:hover {
+.trans-card-green {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 10px;
+  border-bottom: 1px solid rgb(0, 209, 0);
+  width: 300px;
+  min-width: 300px;
+  transition: all 0.2s ease 0s;
+}
+
+.trans-card-red:hover, .trans-card-green:hover {
   transform: scale(1.1);
-  background-color: rgba(67, 73, 255, 0.6);
+  background-color: rgba(67, 73, 255, 0.377);
   z-index: 1;
 }
 

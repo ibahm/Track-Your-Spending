@@ -4,3 +4,5 @@ export default (state, action) => {
             return state;
     }
 }
+
+//Read up on redux
