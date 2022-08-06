@@ -57,23 +57,21 @@ h1 {
   width: 150px;
 }
 
-.budget-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0,0,0,0.1);
-}
-
 .item-2 {
   background-color: rgba(0,0,0,0.1);
 }
 
-.item-3 {
+.total-red {
   border: 2px dashed rgba(67, 73, 255, 0.5);
-  background-color: rgba(67, 73, 255, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
-.edit-budget, .delete-button {
+.total-green {
+  border: 2px dashed rgba(67, 73, 255, 0.5);
+  background-color: rgba(0, 255, 81, 0.2);
+}
+
+.delete-button {
   padding: 5px;
   border-radius: 50px;
   transition: all 0.2s ease 0s;
@@ -97,7 +95,7 @@ h1 {
   padding: 1rem;
   background-color: rgba(0,0,0,0.1);
   border-radius: 10px;
-  border-bottom: 1px solid red;
+  border-left: 2px solid red;
   width: 300px;
   min-width: 300px;
   transition: all 0.2s ease 0s;
@@ -111,7 +109,7 @@ h1 {
   padding: 1rem;
   background-color: rgba(0,0,0,0.1);
   border-radius: 10px;
-  border-bottom: 1px solid rgb(0, 209, 0);
+  border-left: 2px solid rgb(0, 209, 0);
   width: 300px;
   min-width: 300px;
   transition: all 0.2s ease 0s;
@@ -161,7 +159,7 @@ textarea:focus {
   transition: all 0.2s ease 0s;
 }
 
-.add-button:hover, .edit-budget:hover, .delete-button:hover {
+.add-button:hover, .delete-button:hover {
   background-color: rgba(67, 73, 255, 0.2);
   transform: scale(1.08);
   cursor: pointer;
