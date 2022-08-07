@@ -11,6 +11,14 @@ case 'DELETE_TRANSACTION':
                 transactions: state.transactions.filter(transactions => transactions.id !== action.payload)
             }
 ```
+```react.js
+function removeTransaction (id) {
+            dispatch({
+                        type: 'DELETE_TRANSACTION',
+                        payload: id,
+            )};
+}
+```
 
 ```react.js
 <GlobalContext.Provider value={{
