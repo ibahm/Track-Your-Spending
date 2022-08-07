@@ -9,12 +9,14 @@ const NavBar = () => {
     //Add to document understanding of conditional statements
     const total = prices.reduce((pVal, cVal) => (pVal + cVal), 0).toFixed(2);
     const income = prices.filter(cVal => cVal > 0).reduce((pVal, cVal) => (pVal += cVal), 0).toFixed(2);
+    const expense = prices.filter(cVal => cVal < 0).reduce((pVal, cVal) => (pVal += cVal), 0).toFixed(2);
 
     return (
         <div className="nav-bar">
             <h1 className="nav-title">Track Your Spending</h1>
             <ul>
                 <li className="item-2"><span className="income"><b>In £{income}</b></span></li>
+                <li className="item-2"><span className="income"><b>Out -£{Math.abs(expense)}</b></span></li>
                 <li className={total < 0 ? "total-red":"total-green"}><span className="total" ><b>Total £{total}</b></span></li>
             </ul>
         </div>
