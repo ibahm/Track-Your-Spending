@@ -15,9 +15,9 @@ const NavBar = () => {
         <div className="nav-bar">
             <h1 className="nav-title">Track Your Spending</h1>
             <ul>
-                <li className="item-2"><span className="income"><b>In £{income}</b></span></li>
-                <li className="item-2"><span className="income"><b>Out -£{Math.abs(expense)}</b></span></li>
-                <li className={total < 0 ? "total-red":"total-green"}><span className="total" ><b>Total £{total}</b></span></li>
+                <li className="item-2"><span className="income"><b>In: £{income}</b></span></li>
+                <li className="item-2"><span className="expense"><b>Out: -£{Math.abs(expense)}</b></span></li>
+                <li className={total < 0 ? "total-red":"total-green"}><span className="total" ><b>Total: £{total}</b></span></li>
             </ul>
         </div>
     );

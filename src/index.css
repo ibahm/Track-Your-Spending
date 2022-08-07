@@ -29,7 +29,7 @@ code {
   z-index: 999;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  background-color: rgba(67, 73, 255, 0.1);
+  background-color: rgba(67, 73, 255, 0.2);
 }
 
 h1 {
@@ -84,11 +84,13 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .trans-card-red {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 10px;
   padding: 1rem;
@@ -96,13 +98,13 @@ h1 {
   border-radius: 10px;
   border-left: 2px solid red;
   width: 300px;
-  min-width: 300px;
   transition: all 0.2s ease 0s;
 }
 
 .trans-card-green {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   margin: 10px;
   padding: 1rem;
@@ -110,7 +112,6 @@ h1 {
   border-radius: 10px;
   border-left: 2px solid rgb(0, 209, 0);
   width: 300px;
-  min-width: 300px;
   transition: all 0.2s ease 0s;
 }
 
@@ -126,8 +127,13 @@ h1 {
   align-items: center;
   border-radius: 10px;
   margin: 0 10px 10px 10px;
-  border: 2px dashed rgba(67, 73, 255, 0.5);
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(67, 73, 255, 0.25);
+  transition: all 0.1s ease 0s;
+  flex-wrap: wrap;
+}
+
+.add-card:hover {
+  border: 1px solid rgba(67, 73, 255, 0.25);
 }
 
 .add-name{
@@ -141,10 +147,12 @@ h1 {
 textarea {
   resize: none;
   border: 1px solid rgba(0,0,0,0.2);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 5px 20px;
-  background-color: rgba(0,0,0,0.05);
-  resize: none;
+}
+
+textarea::placeholder {
+  color: black;
 }
 
 textarea:focus {
@@ -156,13 +164,13 @@ textarea:focus {
   border-radius: 50px;
   background-color: rgba(0,0,0,0.05);
   margin: 0.5rem;
-  transition: all 0.2s ease 0s;
 }
 
 .add-button:hover, .delete-button:hover {
   background-color: rgba(67, 73, 255, 0.2);
   transform: scale(1.08);
   cursor: pointer;
+  transition: all 0.2s ease 0s;
 }
 
 .add-button:active, .edit-budget:active, .delete-button:active {
