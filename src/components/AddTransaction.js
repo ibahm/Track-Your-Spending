@@ -11,8 +11,6 @@ const AddTransaction = () => {
     const {addTransaction} = useContext(GlobalContext);
 
     const handleChange = e => {
-
-        console.log("add clicked");
         e.preventDefault();
 
         const newTransaction = {
