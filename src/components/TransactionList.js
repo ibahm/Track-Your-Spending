@@ -11,7 +11,7 @@ const TransactionList = () => {
     return (
         <div className="trans-list">
             <AddTransaction/>
-
+            
             {transactions.map(transaction => (
                 <Transaction key={transaction.id} transaction={transaction}/>
             ))}

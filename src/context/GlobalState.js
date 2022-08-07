@@ -1,13 +1,8 @@
 import React, {createContext, useReducer} from "react";
 import AppReducer from './AppReducer';
-import {nanoid} from 'nanoid';
 
 const initialState = {
-    transactions: [
-        {id: {nanoid}, text: 'Steam', price: -50},
-        {id: {nanoid}, text: 'Nandos', price: -130},
-        {id: {nanoid}, text: 'Savings', price: +545.99}
-    ]
+    transactions: []
 }
 
 export const GlobalContext = createContext(initialState);
@@ -16,8 +11,25 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
+    //calls to reducer and uses dispatch to remove 
+    function removeTransaction(id) {
+        dispatch({
+            type: 'DELETE_TRANSACTION',
+            payload: id
+        });
+    }
+
+    function addTransaction (transaction) {
+        dispatch({
+            type: 'ADD_TRANSACTION',
+            payload: transaction
+        });
+    }
+
     return (<GlobalContext.Provider value={{
-        transactions:state.transactions
+        transactions:state.transactions,
+        removeTransaction,
+        addTransaction
     }}>
         {children}
     </GlobalContext.Provider>);
