@@ -63,7 +63,7 @@ h1 {
 
 .total-red {
   border: 2px dashed rgba(67, 73, 255, 0.5);
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.35);
 }
 
 .total-green {
@@ -141,10 +141,11 @@ h1 {
 
 textarea {
   resize: none;
-  border: 1px dashed rgba(0,0,0,0.2);
-  border-radius: 15px;
-  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 5px 20px;
   background-color: rgba(0,0,0,0.05);
+  resize: none;
 }
 
 textarea:focus {

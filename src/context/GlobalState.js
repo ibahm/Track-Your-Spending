@@ -6,7 +6,7 @@ const initialState = {
     transactions: [
         {id: {nanoid}, text: 'Steam', price: -50},
         {id: {nanoid}, text: 'Nandos', price: -130},
-        {id: {nanoid}, text: 'Savings', price: 545.99}
+        {id: {nanoid}, text: 'Savings', price: +545.99}
     ]
 }
 

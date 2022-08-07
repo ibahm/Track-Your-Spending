@@ -7,8 +7,8 @@ const AddTransaction = () => {
     const [price, setPrice] = useState('');
     return (
         <div className="add-card">
-            <textarea className="add-name" placeholder="Type a name..." value={text} onChange={(e) => setText(e.target.value)}></textarea>
-            <textarea className="add-price" placeholder="Type a price..." value={price} onChange={(e) => setPrice(e.target.value)}></textarea>
+            <textarea className="add-name" placeholder="Car Insurance..." value={text} onChange={(e) => setText(e.target.value)}></textarea>
+            <textarea className="add-price" placeholder="-120..." value={price} onChange={(e) => setPrice(e.target.value)}></textarea>
             <VscAdd className="add-button" onClick={() => {}}/>
         </div>
     );
