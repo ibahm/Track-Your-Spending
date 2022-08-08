@@ -1,5 +1,5 @@
 <p align="center"><img width="900" src="https://github.com/ibahm/Track-Your-Spending/blob/main/banners/track-your-spending.png"></p> <h1 align="center">Track Your Spending</h1>
-<p align="center">A web application that allows you to track your financial activity with your income and total difference shown.</p>
+<p align="center">A web application that allows you to track your financial activity with your income, expenses and total difference shown.</p>
 
 # Access
 You can visit an up-to-date version of the site <a href="https://simplyfinance.netlify.app/">here</a>.
