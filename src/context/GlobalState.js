@@ -1,22 +1,23 @@
 import React, {createContext, useReducer, useEffect} from "react";
 import AppReducer from './AppReducer';
 
-// Fetches data on from local storage whenever state is updated
 const initialState = {
-    transactions : JSON.parse(localStorage.getItem('track-your-spending'))
+    transactions : []
 }
 
-export const GlobalContext = createContext(initialState);
+export const GlobalContext = createContext();
 
-// Provider comp
 export const GlobalProvider = ({children}) => {
-    const [state, dispatch] = useReducer(AppReducer, initialState);
+    // Check if local Storage has data to use otherwise use initialState
+    const [state, dispatch] = useReducer(AppReducer, initialState, () => {
+        const localData = localStorage.getItem('track-your-spending');
+        return localData ? JSON.parse(localData) : initialState;
+    });
 
-    // Save to local storage when state.transactions changes
+    // State array changes are saved to local storage
     useEffect(() => {
-        localStorage.setItem('track-your-spending', JSON.stringify(state.transactions));
-        console.log(state.transactions);
-    }, [state.transactions]);
+        localStorage.setItem('track-your-spending', JSON.stringify(state));
+    }, [state]);
 
     // Calls to reducer and uses dispatch to remove 
     function removeTransaction(id) {
