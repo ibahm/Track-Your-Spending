@@ -32,15 +32,19 @@ function removeTransaction (id) {
 **Fetching data from local storage on initial render.**
 ```react.js
 const initialState = {
-    transactions : JSON.parse(localStorage.getItem('track-your-spending'))
+    transactions : []
 }
+
+...
+
+const localData = localStorage.getItem('track-your-spending');
+return localData ? JSON.parse(localData) : initialState;
 ```
 **Saving data to local storage.**
 ```react.js
 useEffect(() => {
-        localStorage.setItem('track-your-spending', JSON.stringify(state.transactions));
-        console.log(state.transactions);
-    }, [state.transactions]);
+        localStorage.setItem('track-your-spending', JSON.stringify(state));
+    }, [state]);
 ```
 # Languages and libraries
 - HTML
