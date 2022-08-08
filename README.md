@@ -1,5 +1,4 @@
-<p align="center"><img width="100" src="https://spng.subpng.com/20180205/lte/kisspng-pound-sign-pound-sterling-icon-libra-png-image-5a77fa2146a754.5235916015178122572894.jpg" alt="GBP Image"></p>
-<h1 align="center">Track Your Spending</h1>
+<p align="center"><img width="30" src="https://github.com/ibahm/Track-Your-Spending/blob/main/public/favicon.ico"></p> <h1 align="center">Track Your Spending</h1>
 <p align="center">A web application that allows you to track your financial activity with your income and total difference shown.</p>
 
 # Access
