@@ -1,5 +1,8 @@
-# Track Your Spending
-A web application that allows you to track your financial activity with your income and total difference shown.
+<p align="center"><img width="30" src="https://github.com/ibahm/Track-Your-Spending/blob/main/public/favicon.ico"></p> <h1 align="center">Track Your Spending</h1>
+<p align="center">A web application that allows you to track your financial activity with your income and total difference shown.</p>
+
+# Access
+You can visit an up-to-date version of the site <a href="https://simplyfinance.netlify.app/">here</a>.
 
 # Approach
 **Used Context API rather than passing props through multiple useState hooks. Implemented App Reducer to allow the state to call actions.**
@@ -32,15 +35,19 @@ function removeTransaction (id) {
 **Fetching data from local storage on initial render.**
 ```react.js
 const initialState = {
-    transactions : JSON.parse(localStorage.getItem('track-your-spending'))
+    transactions : []
 }
+
+...
+
+const localData = localStorage.getItem('track-your-spending');
+return localData ? JSON.parse(localData) : initialState;
 ```
 **Saving data to local storage.**
 ```react.js
 useEffect(() => {
-        localStorage.setItem('track-your-spending', JSON.stringify(state.transactions));
-        console.log(state.transactions);
-    }, [state.transactions]);
+        localStorage.setItem('track-your-spending', JSON.stringify(state));
+    }, [state]);
 ```
 # Languages and libraries
 - HTML
