@@ -1,4 +1,4 @@
-<p align="center"><img width="30" src="https://github.com/ibahm/Track-Your-Spending/blob/main/public/favicon.ico"></p> <h1 align="center">Track Your Spending</h1>
+<p align="center"><img width="800" src="https://github.com/ibahm/Track-Your-Spending/blob/main/banners/track-your-spending.png"></p> <h1 align="center">Track Your Spending</h1>
 <p align="center">A web application that allows you to track your financial activity with your income and total difference shown.</p>
 
 # Access
