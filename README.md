@@ -52,5 +52,5 @@ useEffect(() => {
 # Languages and libraries
 - HTML
 - CSS
-- Javascript
+- JavaScript
 - React
